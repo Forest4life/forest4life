@@ -1,0 +1,115 @@
+/* This file contains css styles for home main part section.*/
+
+/* Basic styling for home page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfefb;
+}
+
+.home_aboutus h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.home_aboutus p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Our projects section */
+.home_project {
+    background-color: #f1f5e0; /* Light nature-inspired background */
+    padding: 50px 20px;
+    text-align: center;
+    display:flex;
+    flex-direction:horizontal;
+    flex-wrap:wrap;
+}
+
+.home_project h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    display:block;
+    width:100%;
+}
+
+.home_project article {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 300px;
+}
+.home_project article img {
+    width:100%;
+    height:auto;
+}
+
+.project_title {
+    font-size: 1.8em;
+    color: #49a43C;
+}
+
+.project_description {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* Our Service section */
+.home_service {
+    background-color: #e3f2d1; /* Another soft green tone */
+    padding: 50px 20px;
+}
+
+.home_service h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.home_service ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.home_service li {
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.home_service li h3 {
+    font-size: 1.5em;
+    color: #7ec136;
+}
+
+.home_service li p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .home_aboutus, .home_project, .home_service {
+	padding: 20px;
+    }
+
+    .home_aboutus h2, .home_project h2, .home_service h2 {
+	font-size: 2em;
+    }
+
+    .home_service li {
+	margin: 10px 0;
+	padding: 15px;
+    }
+}

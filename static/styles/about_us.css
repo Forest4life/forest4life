@@ -1,0 +1,109 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfefb; /* light background to fit your forest theme */
+    color: #333; /* standard dark text */
+}
+
+/* Introduction section styling with background image */
+section.Introduction {
+    padding: 50px 20px;
+    background: url({{ us.about_us_background_picture }}) no-repeat center center;
+    background-size: cover; /* Make the image cover the entire section */
+    position: relative; /* Allows child elements to be positioned over the image */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+section.Introduction::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Slightly darken the image with transparency */
+    z-index: 1; /* Layer the dark overlay between the background and text */
+}
+
+section.Introduction h2,
+section.Introduction p {
+    position: relative;
+    z-index: 2; /* Ensure content is above the dark overlay */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section.Introduction p {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+}
+
+/* Founders section styling */
+section.founders {
+    padding: 50px 20px;
+    background: rgba(73, 164, 60, 0.9); /* another shade of green with more opacity */
+    text-align: center;
+}
+
+section.founders ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section.founders li {
+    background-color: rgba(255, 255, 255, 0.3); /* transparent background for each founder */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* light border for separation */
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    width: 250px; /* standard width for each founder card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* shadow to make the cards pop */
+}
+
+section.founders h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fcfefb;
+}
+
+section.founders img {
+    width: 100%; /* make sure the image is responsive */
+    height: auto;
+    border-radius: 50%; /* circular images for a friendly feel */
+    margin-bottom: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.6); /* white border around the image */
+}
+
+section.founders p {
+    font-size: 1em;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.4); /* semi-transparent background for text */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+    section.Introduction, section.founders {
+	padding: 20px;
+    }
+
+    section.founders ul {
+	flex-direction: column;
+	align-items: center;
+    }
+
+    section.founders li {
+	width: 90%; /* make the founder cards full width on small screens */
+    }
+}

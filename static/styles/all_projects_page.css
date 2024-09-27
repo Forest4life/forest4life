@@ -1,0 +1,91 @@
+/* Styling for the projects container */
+.all_projects_page {
+    max-width: 1200px;
+    margin: 40px auto; /* Center the content and give some spacing */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for readability */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* List styling for all projects */
+.all_projects_page ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 20px; /* Add space between items */
+}
+
+/* Each project container (list item) */
+.all_projects_page li {
+    background-color: #ffffff; /* White background for each project */
+    border-radius: 10px;
+    width: calc(33.33% - 20px); /* 3 items per row with 20px gap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effects */
+}
+
+.all_projects_page li:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+/* Project links */
+.all_projects_page li a {
+    text-decoration: none; /* Remove link underlines */
+    color: #333; /* Default text color */
+    display: block;
+    padding: 20px;
+}
+
+/* Project title styling */
+.all_projects_page h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2c5f2d; /* Forest green for titles */
+    margin-bottom: 10px;
+    text-align: center;
+    transition: color 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.all_projects_page li:hover h2 {
+    color: #7ec136; /* Light green on hover */
+}
+
+/* Project summary */
+.all_projects_page p {
+    font-size: 1.1em;
+    color: #555; /* Softer gray for summary text */
+    text-align: justify;
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+/* Project image styling */
+.all_projects_page img {
+    width: 100%; /* Full width image */
+    height: 200px;
+    object-fit: cover; /* Ensure image scales properly */
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    transition: filter 0.3s ease-in-out; /* Smooth hover effect for image */
+}
+
+.all_projects_page li:hover img {
+    filter: brightness(0.9); /* Slightly darken image on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 992px) {
+    .all_projects_page li {
+	width: calc(50% - 20px); /* 2 items per row for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .all_projects_page li {
+	width: 100%; /* 1 item per row for small screens */
+    }
+}

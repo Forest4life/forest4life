@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="blog-content">
+  <img src="/{{ blog.main_pic }}">
+  <h2><strong>{{blog.title}}</strong></h2>
+  <h4>by:{{ blog.author }}, {{ blog.date }}</h4>
+  <p>{{ blog.introduction_paragraphy }}</p>
+  <img src="/{{ blog.introduction_pic }}">
+  <h3>{{ blog.paragraphy_1_heading }}</h3>
+  <p>{{ blog.content_paragraphy_1 }}
+    <img src="/{{ blog.paragraphy_1_pic_1 }}">
+    <img src="/{{ blog.paragraphy_1_pic_2 }}">
+  </p>
+  <h3>{{ blog.paragraph_2_heading }}</h3>
+  <p>{{ blog.content_paragraphy_2 }}
+    <img src="/{{ blog.paragraphy_2_pic_1 }}">
+    <img src="/{{ blog.paragraphy_2_pic_2 }}">
+    <img src="/{{ blog.paragraphy_2_pic_3 }}">
+  </p>
+  <p>{{ blog.conclusion_paragraphy }}</p>
+</div>
+{% endblock %}

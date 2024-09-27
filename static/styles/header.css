@@ -1,0 +1,143 @@
+/*This is a file containing css styles for header.*/
+body {
+    display:block;
+    margin:0px;
+    padding:0px;
+    font:Sans-serif;
+}
+
+header {
+    border-bottom: 1px solid green;
+    display:block;
+    width:100%;
+    margin-left:0px;
+    margin-right:0px;    
+}
+
+section.Contactinfo {
+    display:flex;
+    flex-direction: horizontal;
+    margin-bottom:1px solid white;
+    padding-left:2.5%;
+    padding-right: 2.5%;
+    background-color: #49a43C;
+    width:95%;
+    border-bottom: 1px solid #fcfefb;
+    min-height:35px;
+    align-items:center;
+    color:#e0ffff;
+}
+
+div.contacts{
+    display:inline-block;
+    width:50%;
+}
+
+div.socials {
+    display:inline-block;
+    width:50%;
+    text-align:right;
+}
+
+a {
+    margin:3px;
+    color: #F5F5DC;
+}
+
+a.email{
+    width:45%;
+    margin:0px;
+    padding-left:2.5%;
+    padding-right:2.5%;
+}
+a.tel {
+    width:45%;
+    margin:0px;
+    padding-left:2.5%;
+    padding-right:2.5%;
+
+}
+a:hover {
+    size:120%;
+    color:#D2B48C;
+	
+}
+
+/* css for the menu section. */
+
+section.main_menu {
+    display: flex;
+    flex-direction: horizontal;
+    background: linear-gradient(to bottom, #49a43C, #2f4f2f);
+    color:#fcfefb;
+
+    padding-right:0px;
+
+}
+div.logo, nav.menu {
+    width:45%;
+    padding:2.5%;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+nav.menu {
+    padding-right:0px;
+ 
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+div.logo {
+    background-image: url('/static/images/company-logo.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding-left:50px;
+    font-size:30px;
+    border-radius: 9px;
+}
+
+
+/* General mobile view adjustments */
+@media (max-width: 768px) {
+
+    /* Header Section */
+    header {
+	padding: 10px;
+    }
+
+    /* Contact info section in the header */
+    .Contactinfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
+
+    .contacts a, .socials a {
+	margin: 5px 0; /* Spacing between contact links */
+    }
+
+    .socials {
+	margin-top: 10px;
+    }
+
+    .socials a {
+	font-size: 1.2em; /* Adjust icon size */
+    }
+
+    /* Main menu (navigation) */
+    .main_menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+    }
+}

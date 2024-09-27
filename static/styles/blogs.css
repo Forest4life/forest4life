@@ -1,0 +1,102 @@
+/* General styling for the blog container */
+.blog-content {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog title */
+.blog-content h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2c5f2d;
+    text-align: center;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+/* Blog author and date */
+.blog-content h4 {
+    font-size: 1.2em;
+    font-style: italic;
+    text-align: center;
+    color: #6d7a74;
+    margin-bottom: 20px;
+}
+
+/* Blog introduction paragraph */
+.blog-content p {
+    font-size: 1.1em;
+    line-height: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Section headings inside the blog */
+.blog-content h3 {
+    font-size: 1.8em;
+    color: #49764d;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+/* Main image */
+.blog-content img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Images inside paragraphs */
+.blog-content p img {
+    width: 30%;
+    height: auto;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    float: left;
+}
+
+/* Ensure multiple images are aligned horizontally */
+.blog-content p::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Blog conclusion */
+.blog-content p:last-child {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-top: 30px;
+    border-left: 4px solid #7ec136;
+    padding-left: 10px;
+    color: #3e4d44;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .blog-content {
+	padding: 15px;
+    }
+
+    .blog-content h2 {
+	font-size: 2em;
+    }
+
+    .blog-content h3 {
+	font-size: 1.5em;
+    }
+
+    .blog-content p img {
+	width: 100%;
+	margin: 10px 0;
+	float: none;
+    }
+}

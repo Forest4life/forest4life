@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://kit.fontawesome.com/2775cc78e8.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href="{{url_for('static', filename='styles/header.css')}}">
+    <link rel='stylesheet' href="{{url_for('static', filename='styles/footer.css')}}">
+    <link rel='stylesheet' href="{{url_for('static', filename='styles/home.css')}}">
+    <link rel='stylesheet' href="{{url_for('static', filename='styles/about_us.css')}}">
+    <link rel='stylesheet' href="{{url_for('static', filename='styles/blogs.css')}}">
+    <link rel='stylesheet' href="{{url_for('static', filename='styles/all_projects_page.css')}}">
+        <link rel='stylesheet' href="{{url_for('static', filename='styles/all_blogs.css')}}">
+    <link rel='stylesheet' href="{{url_for('static', filename='styles/individual_project_page.css')}}">
+  </head>
+  <body>
+    <!--This side starts header and it should be part of 
+all pages in this project.-->
+    <header>
+      <section class='Contactinfo'>
+	<div class='contacts'>
+	  <a href="mailto:{{addresses.email}}">{{addresses.email}}</a>
+	  <a>{{addresses.tel}}</a>
+	</div>
+	<div class='socials'>
+	  follow us:
+	  <a href={{addresses.twitter}}><i class="fa-brands fa-x-twitter"></i></a>
+	  <a href={{addresses.instagram}}><i class="fa-brands fa-instagram"></i></a>
+	  <a href={{addresses.facebook}}><i class="fa-brands fa-facebook"></i></a>
+	  <a href={{addresses.linkedin}}><i class="fa-brands fa-linkedin"></i></a>
+	</div>
+      </section>
+      <section class='main_menu'>
+	<div class='logo'><strong>Forest4Life</strong></div>
+	<nav class='menu'>
+          <a href="/">Home</a>
+          <a href="/about">About Us</a>
+          <a href="/project/">Projects</a>
+          <a href="/blog">Blogs</a>
+        </nav>
+      </section>
+    </header>
+    <!-- This ends the header section to be included everywhere.-->
+    {% block content %}{% endblock%}
+
+    <!-- this line is debugging line.-->
+    
+    <!--This is footer section also to be included
+	in all pages of this project.-->
+    <footer>
+      <div class="introduction_text">
+	<p><strong>Forest4Life</strong>, the driving force behind a sustainable and thriving future! Our mission is to empower communities worldwide through the practice of conservation agriculture while fostering environmental restoration. Together, we can build a greener, healthier, and more resilient planet. 
+	</p>
+      </div>
+      <div class="address">
+	<h2><strong>Address</strong></h2>
+	<a>{{addresses.location}}</a>
+	<a href="mailto:{{addresses.email}}">{{addresses.email}}</a>
+	<a>{{addresses.tel}}</a>
+	<span>Socials:
+	  <a href={{addresses.twitter}}><i class="fa-brands fa-x-twitter"></i></a>
+	  <a href={{addresses.instagram}}><i class="fa-brands fa-instagram"></i></a>
+	  <a href={{addresses.facebook}}><i class="fa-brands fa-facebook"></i></a>
+	  <a href={{addresses.linkedin}}><i class="fa-brands fa-linkedin"></i></a>
+	</span>
+      </div>
+      <div class="donate"><h2>Our Partners:</h2>
+      </div>
+    </footer>
+    <!--This footer ends here-->
+  </body>
+  </html>

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="project-container">
+  <h1 class="project-title">{{ project.title }}</h1>
+  <div class="project-summary">
+    <p>{{ project.summary }}</p>
+  </div>
+  <div class="project-details">
+    <p class="project-description"><strong>Description:</strong> {{ project.description }}</p>
+    <p class="project-goal"><strong>Goals:</strong> {{ project.goal }}</p>
+    <p class="project-impact"><strong>Impact:</strong> {{ project.impact }}</p>
+    <p class="project-date"><strong>Project started:</strong> {{ project.created_at.strftime('%Y-%m-%d') }}</p>
+  </div>
+  <div class="project_activities">
+    <h2>This project's activities</h2>
+    <ul>
+      {% for post in project.uploads %}
+      <li>
+	<img src="{{ post.photo }}">
+	<p>{{ post.post_description }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

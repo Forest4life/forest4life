@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}About us {% endblock %}
+{% block  content %}
+<style>
+  section.Introduction {
+      padding: 50px 20px;
+      background: url(" {{ us.about_us_background_picture }}") no-repeat center center;
+      background-size: cover;
+      position: relative;
+      color: white;
+  }
+</style>
+
+<div>
+  <section class='Introduction'>
+    <div><h2><strong>Who we are</strong></h2>
+      <p>{{ us.full_description }}</p>
+    </div>
+    <div><h2><strong>Our Mission</strong></h2>
+      <p>{{ us.mission }}</p>
+    </div>
+    <div><h2><strong>Our Vision</strong></h2>
+      <p>{{ us.vision }}</p>
+    </div>
+  </section>
+  <section class='founders'>
+    <ul>
+      {% for founder in founders | sort(attribute='name') %}
+      <li>
+	<div>
+	  <h2><strong> {{ founder.Full_name }}</strong></h2>
+	  <img src='{{founder.picture}}'>
+	  <p>{{founder.profile}}</p>
+	</div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+{% endblock %}

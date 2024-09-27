@@ -1,0 +1,88 @@
+/*This is a file containing css styles for header.*/
+body {
+    display:block;
+    margin:0px;
+    padding:0px;
+    font:Sans-serif;
+}
+
+header {
+    border-bottom: 1px solid green;
+    display:block;
+    width:100%;
+    margin-left:0px;
+    margin-right:0px;    
+}
+
+section.Contactinfo {
+    display:flex;
+    flex-direction: horizontal;
+    margin-bottom:1px solid white;
+    padding-left:2.5%;
+    padding-right: 2.5%;
+    background-color: #49a43C;
+    width:95%;
+    border-bottom: 1px solid #fcfefb;
+    min-height:35px;
+    align-items:center;
+    color:#e0ffff;
+}
+
+div.contacts{
+    display:inline-block;
+    width:50%;
+}
+
+div.socials {
+    display:inline-block;
+    width:50%;
+    text-align:right;
+}
+
+a {
+    margin:3px;
+}
+
+a.email{
+    width:45%;
+    margin:0px;
+    padding-left:2.5%;
+    padding-right:2.5%;
+}
+a.tel {
+    width:45%;
+    margin:0px;
+    padding-left:2.5%;
+    padding-right:2.5%;
+
+}
+a:hover {
+    size:120%;
+}
+
+/* css for the menu section. */
+
+section.main_menu {
+    /*background-color:#7ec136;*/
+    display: flex;
+    flex-direction: horizontal;
+    background: linear-gradient(to bottom, #49a43C, #2f4f2f);
+    color:#fcfefb;
+
+}
+div.logo, nav.menu {
+    width:45%;
+    padding:2.5%;
+
+}
+div.logo {
+    background-image: url('/static/images/company-logo.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding-left:50px;
+    font-size:30px;
+    border-radius: 9px;
+}

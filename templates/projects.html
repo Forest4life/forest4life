@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="all_projects_page">
+  <ul>
+    {% for project in projects | sort(attribute=created_at) %}
+    <li>
+      <a href="/project/{{ project.id }}">
+	<h2><strong>{{ project.title }}</strong></h2>
+	<p>{{ project.summary }} </p>
+	<img src="{{ project.uploads[0].photo }}">
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

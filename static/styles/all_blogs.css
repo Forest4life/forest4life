@@ -1,0 +1,188 @@
+/* Blog page container */
+.all_blogs_page {
+    max-width: 1200px;
+    margin: 40px auto; /* Center the container and add vertical space */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Blog list styling */
+.all_blogs_page ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Ensure the blog items wrap nicely */
+    gap: 20px; /* Add space between items */
+}
+
+/* Individual blog item styling */
+.all_blogs_page li {
+    background-color: #ffffff; /* White background for each blog */
+    border: 1px solid #ddd; /* Light border to separate blog items */
+    border-radius: 10px;
+    width: calc(33.33% - 20px); /* Three blog items per row with space between */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.all_blogs_page li:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increase shadow on hover */
+}
+
+/* Blog title styling */
+.all_blogs_page h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2c5f2d; /* Dark green title */
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 15px;
+    transition: color 0.3s ease;
+}
+
+.all_blogs_page li:hover h2 {
+    color: #7ec136; /* Light green hover effect for title */
+}
+
+/* Blog introduction paragraph styling */
+.all_blogs_page p {
+    font-size: 1.1em;
+    color: #555; /* Softer gray for text */
+    line-height: 1.7em;
+    text-align: justify;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+/* Blog image styling */
+.all_blogs_page img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniform size */
+    object-fit: cover; /* Ensure image doesn't stretch */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Blog link styling */
+.all_blogs_page a {
+    text-decoration: none; /* Remove default link styling */
+    color: inherit; /* Inherit the color from parent elements */
+    display: block;
+}
+
+/* Responsive design for medium screens */
+@media (max-width: 992px) {
+    .all_blogs_page li {
+	width: calc(50% - 20px); /* Two blog items per row */
+    }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .all_blogs_page li {
+	width: 100%; /* Single blog item per row */
+    }
+
+    .all_blogs_page h2 {
+	font-size: 1.5em;
+    }
+}
+/* Blog page container */
+.all_blogs_page {
+    max-width: 1200px;
+    margin: 40px auto; /* Center the container and add vertical space */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Blog list styling */
+.all_blogs_page ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Ensure the blog items wrap nicely */
+    gap: 20px; /* Add space between items */
+}
+
+/* Individual blog item styling */
+.all_blogs_page li {
+    background-color: #ffffff; /* White background for each blog */
+    border: 1px solid #ddd; /* Light border to separate blog items */
+    border-radius: 10px;
+    width: calc(33.33% - 20px); /* Three blog items per row with space between */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.all_blogs_page li:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increase shadow on hover */
+}
+
+/* Blog title styling */
+.all_blogs_page h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2c5f2d; /* Dark green title */
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 15px;
+    transition: color 0.3s ease;
+}
+
+.all_blogs_page li:hover h2 {
+    color: #7ec136; /* Light green hover effect for title */
+}
+
+/* Blog introduction paragraph styling */
+.all_blogs_page p {
+    font-size: 1.1em;
+    color: #555; /* Softer gray for text */
+    line-height: 1.7em;
+    text-align: justify;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+/* Blog image styling */
+.all_blogs_page img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniform size */
+    object-fit: cover; /* Ensure image doesn't stretch */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Blog link styling */
+.all_blogs_page a {
+    text-decoration: none; /* Remove default link styling */
+    color: inherit; /* Inherit the color from parent elements */
+    display: block;
+}
+
+/* Responsive design for medium screens */
+@media (max-width: 992px) {
+    .all_blogs_page li {
+	width: calc(50% - 20px); /* Two blog items per row */
+    }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .all_blogs_page li {
+	width: 100%; /* Single blog item per row */
+    }
+
+    .all_blogs_page h2 {
+	font-size: 1.5em;
+    }
+}

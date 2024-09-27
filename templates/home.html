@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<style>
+  .home_aboutus {
+      background-image: url("{{ us.home_background_picture }}");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 60px 20px;
+  }
+</style>
+<div>
+  <section class='home_aboutus'>
+    <div class='who_we_are'><h2><strong>Who we are</strong></h2>
+      <p>
+	At <strong>Forest4Life</strong>, we believe in the power of collective action and the transformative potential of conservation agriculture. Through this innovative approach, we harness the wisdom of nature and blend it with cutting-edge techniques to create a harmonious balance between agricultural production and environmental preservation. </p>
+    </div>
+  </section>
+  <section class='home_project'><h2><strong>Our projects</strong></h2>
+    {% for project in projects %}
+    <article>
+      <h1 class='project_title'>{{project.title}}</h1>
+      <p class='project_description'>{{project.summary}}</p>
+      <img src={{project.uploads[0].photo}}><!-- This is a single image from the project.-->
+    </article>
+    {% endfor %}
+  </section>
+  <section class='home_service'>
+    <ul><h2><strong>Our Service</strong></h2>
+      {% for service in services | sort(attribute=name) %}
+      <li>
+	<h3>{{service.name}}</h3>
+	<p>{{service.description}}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+{% endblock %}
