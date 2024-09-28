@@ -236,18 +236,22 @@ def blog(blog_id):
     if blog_id:
         blog = Blog.query.get(blog_id)
         addresses = Address.query.get(1)
+        us = Us.query.get(1)
         partners = Partners.query.all()
         return render_template('individual_blogs.html',
                                blog=blog,
                                partners=partners,
+                               us=us,
                                addresses=addresses)
         
     else:
         blog = Blog.query.all()
         addresses = Address.query.get(1)
         partners = Partners.query.all()
+        us = Us.query.get(1)
         return render_template('blogs.html',
                                blogs=blog,
+                               us=us,
                                partners=partners,
                                addresses=addresses)
 
@@ -273,20 +277,24 @@ def home_page():
 def all_project(project_id):
     """Return project page."""
     if project_id:
+        us = Us.query.get(1)
         project = Project.query.get(project_id)
         addresses = Address.query.get(1)
         partners = Partners.query.all()
         return render_template('individual_project.html',
                                addresses=addresses,
                                partners=partners,
+                               us=us,
                                project=project)
     else:
+        us = Us.query.get(1)
         projects = Project.query.all()
         partners = Partners.query.all()
         addresses = Address.query.get(1)
         return render_template('projects.html',
                                addresses=addresses,
                                partners=partners,
+                               us=us,
                                projects=projects)
         
 
@@ -328,10 +336,11 @@ def login():
             return render_template('login.html', error="Invalid credentials")
     return render_template('login.html')
 
-
+@app.route('/project/uploads/<filename>')
+@app.route('/blog/uploads/<filename>')
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
-        return send_from_directory('uploads', filename)
+    return send_from_directory('uploads', filename)
 
     
 @app.route('/logout')

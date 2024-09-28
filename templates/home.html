@@ -14,16 +14,19 @@
   <section class='home_aboutus'>
     <div class='who_we_are'><h2><strong>Who we are</strong></h2>
       <p>
-	At <strong>Forest4Life</strong>, we believe in the power of collective action and the transformative potential of conservation agriculture. Through this innovative approach, we harness the wisdom of nature and blend it with cutting-edge techniques to create a harmonious balance between agricultural production and environmental preservation. </p>
+	At <strong>Forest4Life</strong>, {{ us.short_introduction }}
+      </p>
     </div>
   </section>
   <section class='home_project'><h2><strong>Our projects</strong></h2>
     {% for project in projects %}
-    <article>
-      <h1 class='project_title'>{{project.title}}</h1>
-      <p class='project_description'>{{project.summary}}</p>
-      <img src={{project.uploads[0].photo}}><!-- This is a single image from the project.-->
-    </article>
+    <a href="/project/{{ project.id }}" style='color:black; text-decoration:none;'>
+      <article>
+	<h1 class='project_title'>{{project.title}}</h1>
+	<p class='project_description'>{{project.summary}}</p>
+	<img src={{project.uploads[0].photo}}><!-- This is a single image from the project.-->
+      </article>
+    </a>
     {% endfor %}
   </section>
   <section class='home_service'>
